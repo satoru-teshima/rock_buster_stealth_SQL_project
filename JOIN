@@ -1,0 +1,10 @@
+Using JOIN, this displays which countries Rockbuster customers are based in.
+
+SELECT country, COUNT(b.customer_id)
+FROM rental a
+	INNER JOIN customer b on a.customer_id = b.customer_id
+	INNER JOIN address c on b.address_id = c.address_id
+	INNER JOIN city d on c.city_id = d.city_id
+	INNER JOIN country e on d.country_id = e.country_id
+GROUP BY country
+ORDER BY COUNT(b.customer_id) DESC
