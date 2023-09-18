@@ -1,0 +1,21 @@
+Using CTE, this query displays the top 10 cities within the top 10 countries 
+
+WITH top_ten_country (country)AS
+(SELECT country
+FROM customer a
+INNER JOIN address b on a.address_id = b.address_id inner join city c on b.city_id = c.city_id
+INNER JOIN country d on c.country_id = d.country_id group by country
+ORDER BY COUNT(customer_id) DESC
+LIMIT 10)
+
+
+SELECT d.country, city, COUNT(customer_id) as total_customer 
+FROM customer a
+INNER JOIN address b on a.address_id = b.address_id 
+INNER JOIN city c on b.city_id = c.city_id
+INNER JOIN country d on c.country_id = d.country_id 
+INNER JOIN top_ten_country e on d.country = e.country
+WHERE d.country = e.country
+GROUP BY d.country, city
+ORDER by count(customer_id) desc
+LIMIT 10
