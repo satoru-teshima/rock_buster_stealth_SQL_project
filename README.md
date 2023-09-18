@@ -35,6 +35,6 @@ The data provided in the project brief are:
 Data Dictionary is included in the file. 
 
 ## Visualization
-Visualisations were made using Tableau. They are included in the final report here. 
+Visualisations were made using Tableau. They are included in the final report [here]([url](https://github.com/satoru-teshima/rock_buster_stealth_SQL_project/blob/main/Rockbuster%20Stealth%20Data%20Analysis%20Report.pdf)https://github.com/satoru-teshima/rock_buster_stealth_SQL_project/blob/main/Rockbuster%20Stealth%20Data%20Analysis%20Report.pdf). 
 
 
